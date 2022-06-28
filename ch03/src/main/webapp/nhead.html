@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+*{margin: 0px; padding: 0px;}
+body {
+	font-family: "맑은 고딕", 돋음;
+	font-size: 12px;
+	color: #333;
+}
+.header{
+	width:630px;
+	height:100px;
+	margin:50px auto;
+	border:1px solid #ddd;
+}
+
+.header .logo, .header, .search-box{
+	float:left;
+}
+
+.input-text, #keyboard, #dropdown, .btn-search button{
+	float:right;
+}
+
+.header .logo{
+    display: inline-block;
+    width: 222px;
+    height: 52px;
+    font-size: 0px;
+    background-position: 0 -158px;
+    background-repeat: no-repeat;
+    background-image: url("/ch03/images/nsplite.png");
+    background-size: 457px 434px;
+}
+
+.header .search-box { 
+	width: 400px; 
+	height: 50px; 
+	margin-left:0px;
+	border: 2px solid #19ce60; 
+}
+
+.header .search-box .input-text { 
+	width: 300.5px;
+    height: 20px;
+	outline: 0;
+	background-color: #fff;
+	line-height: 24px;
+	color: #000;
+	font-size: 18px;
+	font-weight: 700;
+	border-radius: 0;
+    border: 0;
+    float:left;
+    margin: 15px 0px 15px 0px;
+}
+
+#dropdown{
+    width: 10px;
+    height: 5px;
+    font-size: 0px;
+    background-position: -408px -100px;
+    background-repeat: no-repeat;
+	background-image: url("/ch03/images/nsplite.png");
+    background-size: 457px 434px;
+    margin: 25px 5px 25px 5px;
+}
+
+#keyboard {
+    width: 20px;
+    height: 12px;
+    font-size: 0px;
+    background-position: -420px -402px;
+    background-repeat: no-repeat;
+    background-image: url("/ch03/images/nsplite.png");
+    background-size: 457px 434px;
+    margin: 20px 5px 20px 5px;
+}
+
+
+
+.search-box input, .search-box a{
+	/*인라인 레벨 블록레벨로 변경 */
+	display: block;
+}
+.search-box .btn-search button {
+	border:none;
+	font-size: 0px;
+    width: 22px;
+    height: 22px;
+    background-position: -420px 0;
+    background-repeat: no-repeat;
+    vertical-align: top;
+	background-image: url("/ch03/images/nsplite.png");
+	background-size: 457px 434px;
+	background-color: #19ce60;
+	-webkit-transform:scale(2.0);
+	margin: 10px 10px 10px 10px;
+}
+
+
+</style>
+</head>
+<body>
+	<div class="header">
+	 	<h1 class="logo">네이버</h1>
+	 	<div class="search-box">
+	 		<input type="text" class="input-text"/>
+ 			<div class="btn-search">
+	 			<button>돋보기</button>
+	 		</div>
+	 		<a href="#" id="dropdown">드롭다운</a>
+	 		<a href="#" id="keyboard">키보드</a>
+	 	</div>
+	</div>
+</body>
+</html>
