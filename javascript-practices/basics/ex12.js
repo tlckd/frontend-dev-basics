@@ -6,7 +6,7 @@
  Array.prototype.remove = function(index) {
     this.splice(index, 1);
 }
-
+a = 
 Array.prototype.insert = function(index, value) {
     if(value instanceof Array) {
         // for(var i = 0; i < value.length; i++) {
