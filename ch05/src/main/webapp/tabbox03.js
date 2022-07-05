@@ -9,11 +9,15 @@ var tabBox = {
 	
 	_onTabClicked: function() {
 		// unselect
-		var lisSelected = document.getElementsByClassName('selected');
-		lisSelected.length == 1 && (lisSelected[0].className = '');
+		//var lisSelected = document.getElementsByClassName('selected');
+		var lisSelected =$(".selected");
+		//lisSelected.length == 1 && (lisSelected[0].className = '');
+		
+		lisSelected.length == 1 && (lisSelected[0].attr("className",""));
 		
 		//select
 		this.className = 'selected';
+		
 	},
 	
 	_onWindowLoad: function() {
@@ -22,13 +26,15 @@ var tabBox = {
 		// var liTabs = ul.getElementsByTagName("li");
 		
 		var liTabs = $(".tab-box>ul>li");
+		liTabs.click(this._onTabClicked);
 		
+		/*
 		for(var i = 0; i < liTabs.length; i++){
 			//liTabs[i].addEventListener("click", this._onTabClicked);
-			liTabs[i].onclick(function(){
+			liTabs[i].click(function(){
 				this._onTabClicked
 			})
-		}
+		}*/
 		
 		
 		
