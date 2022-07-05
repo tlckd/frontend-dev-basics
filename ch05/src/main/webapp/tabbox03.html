@@ -4,10 +4,14 @@
 <meta charset="utf-8">
 <title>리스트를 이용한 메뉴 만들기</title>
 <link rel="stylesheet" type="text/css" href="tabbox.css"></link>
-<script src="tabbox03.js"></script>
 <script type="text/javascript" src="jquery/jquery-3.6.0.js"></script>
 <script>
-tabBox.init();
+$(function(){
+	$(".tab-box ul li").click(function(){
+		$(".tab-box ul li.selected").removeClass("selected");//셀렉티드 된애들 찾은다음 리무브 클래스해서 셀렉트 없애버림 
+		$(this).addClass("selected");//그리고 애드 클래스해서 셀렉티드 추가해줌
+	})
+});
 </script>
 </head>
 <body>
