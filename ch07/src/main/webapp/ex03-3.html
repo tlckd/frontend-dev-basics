@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="jquery/jquery-3.6.0.js"></script>
+<script>
+$(function(){
+	var $obj = $(".par");
+	console.log($obj.length);//2
+	console.log(typeof($obj)+ ":" + ($obj instanceof Array));//유사배열
+	console.log($obj['0']); // 프로퍼티는 원래 스트링 원래는 '0' 이렇게 해야하는데 0적어도 자동으로 바꿔줌, length가 아니라 오브젝트 넣는거 
+	console.log($obj.get(0)) // 위에꺼랑 똑같은거 ㅇㅇ 0번째꺼 값 들고오는거 
+	
+});
+</script>
+</head>
+<body>
+	<h1 id="header">Simple jQuery 만들기1</h1>
+	
+	<p class='par'>문장1</p>
+	<p>문장2</p>
+	<p  class='par'>문장3</p>
+	<p>문장4</p>
+</body>
+</html>
+ 

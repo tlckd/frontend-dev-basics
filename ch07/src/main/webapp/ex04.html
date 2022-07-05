@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="jquery/jquery-3.6.0.js"></script>
+<script>
+$(function(){
+	setTimeout(function(){
+		var $obj = $("li"); /* li css 선택자 찾아서 제이쿼리 오브젝트에 넣음 */ 
+		$("li").css('text-decoration','underline');  /* css스타일 이름주고 값주면 바꿀 수 있음*/ 
+	}, 1000);
+});
+</script>
+
+</head>
+<body>
+	<h1>선택자 - 태그</h1>
+	<ul>
+		<li>텍스트 텍스트 텍스트 텍스트 텍스트</li>
+		<li>텍스트 텍스트 텍스트 텍스트 텍스트</li>
+		<li>텍스트 텍스트 텍스트 텍스트 텍스트</li>
+		<li>텍스트 텍스트 텍스트 텍스트 텍스트</li>
+	</ul>
+</body>
+</html>

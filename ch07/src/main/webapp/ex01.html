@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- 압축버전(애플리케이션 서버 호스팅, 앱 배포할때 쓰는거): compressed, production -->
+<!--   <script src="jquery/jquery-3.6.0.min.js"> </script> -->
+<!-- 소스버전(애플리케이션 서버 호스팅, 개발할떄 쓰는거 ): uncompressed, development -->
+<!--  <script src="jquery/jquery-3.6.0.js"> </script> -->
+<!-- 압축버전(CDN 정적자원을 배포하기위한 네트워크 서버, url로 받아오는거 ㅇㅇ ): compressed, production -->
+<!--   <script src="https://code.jquery.com/jquery-3.6.0.min.js"> </script> -->
+<!-- 압축버전(CDN 정적자원을 배포하기위한 네트워크 서버, url로 받아오는거 ㅇㅇ ): compressed, production -->
+   <script src="https://code.jquery.com/jquery-3.6.0.js"> </script> 
+
+
+
+<script>
+//제이쿼리 오브젝트라는걸 표시할때는 관례적으로 변수명에 $ 붙여줌
+	var $obj = jQuery(); 
+	console.log(typeof(jQuery), typeof($obj), $obj.jquery, $obj1.jquery, $obj1 instanceof Array);
+	
+	var $obj2 = $(); 
+	console.log(typeof($), typeof($obj2), $obj2.jquery);
+	
+// $(); 라고 쓰는거랑 jQuery(); 라고 쓰는거랑 같음 ㅇㅇ 
+
+
+</script>
+</head>
+<body>
+	<h1>jQuery 로딩</h1>
+</body>
+</html>
+ 
