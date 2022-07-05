@@ -9,12 +9,12 @@
 	
 // 1. DOM이 완료된 시점 : DOM API 사용 
 window.addEventListener("load", function(){
-	var $obj = $("#header"); // id가 header인 엘리머트 찾아서 제이쿼리 오브젝트에 넣으 ㅁ 
+	var $obj = $("#header"); 
 	console.log(obj.length);
 });
 
 //2. DOM이 완료된 시점 : jQuery를 사용하는 방법 1
-$(document).ready(function(){ //돔로딩이 다 완성된 시점에서 제이쿼리 적용 ㅇㅇ
+$(document).ready(function(){
 	var $obj = $("#header");
 	console.log(obj.length);
 })
@@ -22,10 +22,10 @@ $(document).ready(function(){ //돔로딩이 다 완성된 시점에서 제이�
 //3. DOM이 완료된 시점 : jQuery를 사용하는 방법 2 : 추천 
 $(function(){
 	//반환되는 jquery Object는 유사 배열이다. 
-	var $obj = $("ul li"); // css 선택자 그대로 사용가능, 길이 4 ㅇㅇ 
+	var $obj = $("ul li"); 
 	console.log(obj.length, $obj[0], $obj instanceof Array);
 	
-	// 반환되는 jQuery Object 객체는 절대 null이 아님, 아무것도 못찾았을때 null, undefined 안들어감, 반드시 new해서 리턴함 ㅇㅇ 그냥 length 0 이고, 속성이 없는거 ㅇㅇ 
+	
 	var $obj = $("#none");
 	console.log($obj != null, $obj !== undefined, typeof($obj));
 	
