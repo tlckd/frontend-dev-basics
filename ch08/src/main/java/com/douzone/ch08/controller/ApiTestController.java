@@ -16,7 +16,7 @@ public class ApiTestController {
 		return "html";
 	}
 	
-	@RequestMapping("/json01")
+	@RequestMapping("/json")
 	public String json01() {
 		return "json01";
 	}

@@ -16,6 +16,7 @@
 	<!-- validator, conversionService, messageConverter를 자동으로 등록 -->
 	<mvc:annotation-driven>
 		<mvc:message-converters>
+		
 			<!-- html(text) Message Converter-->
 			<bean class="org.springframework.http.converter.StringHttpMessageConverter">
 				<property name="supportedMediaTypes">
@@ -24,6 +25,16 @@
 					</list>
 				</property>
 			</bean>
+			
+			<!-- json 명시적으로 ㅇㅇ  -->
+			<bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+			   <property name="supportedMediaTypes">
+			       <list>
+			            <value>application/json; charset=UTF-8</value>
+			        </list>
+			   </property>
+			</bean>
+
 		</mvc:message-converters>
 	</mvc:annotation-driven>
 	
