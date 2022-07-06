@@ -10,13 +10,42 @@ $(function() {
 	$("#btn").click(function(){
 		$(this)
 			.hello()
-			.flash();
+			.flash(); // 자기자신 리턴하게 해서 체인걸 수 있느거 이런식으로 ㅇㅇ 
 	});
 });  
+
+// 제이쿼리 플러그인 
+$.fn.hello = function(){
+	console.log('Hello World'); 
+	console.log(this.length);
+	console.log(this);
+	console.log(this.attr('title'));
+	
+	return this; //체인걸기위한 자기자신리턴 ㅇㅇ 규칙 
+	// 제이쿼리 메소드에서 this는 오브젝트 이벤트헨들러에서 this는 엘리먼트 
+}
+
+//제이쿼리 플러그인 플러시 
+$.fn.flash= function(){
+	var _this = this;  // 지역변수니깐 없어져야하는데 살아있음 이런걸 클로저라고 부름 예의 스코프가 부르고 있는 함수에 영향 받는거 var인데 그 함수에서 사용하고있으면 안사라지고 붙어있는거 
+	// 스코프는 렉시컬이지만 근처함수에서 쓰고있으면 사라지지 않는다 ㅎㄷㄷ.. 헷가릴면 전역으로 ㄱㄱ 스코프가 바뀐다, 플러그인 중요  
+	var isBlink = false; // 플래그용 변수 
+	
+	setInterval(function(){ //타이머 걸어두고 다음칸으로 이동 
+		this.css('background-color', isBlink ? '#f00' : '#fff'); // 3항연산자로 true일때 false일떄 색깔 바꾸는거 
+		// 여기서 this는 글로벌임 그래서 this 처리하는거 수업시간에 배웠던거 해줘야함 ㅇㅇ bind 같은거 
+		
+		isBlink = !isBlink; // true false 반전해서 깜빡거리게 
+	},1000);
+	
+	
+	
+}
+
 </script>
 </head>
 <body>
-	<h1>jQuery Plug In</h1>
+	<h1 style="width: 300px">jQuery Plug In</h1>
 	<div style='width:200px; margin: 50px auto'>
 		<button id='btn' title='click me'>click me</button>
 	</div>
