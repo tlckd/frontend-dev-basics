@@ -12,7 +12,7 @@
 $(function(){
 	$("button").click(function() {
 		var vo = {
-			name: '둘리',
+			name: $("#name").val(),
 			password: '1234',
 			message: '호이~'
 		};
@@ -52,5 +52,9 @@ $(function(){
 	
 	<button>데이터 가져오기</button>
 	<div id="data"></div>
+	
+	<form>
+		<input type='text' id="name" />
+	</form>
 </body>
 </html>
