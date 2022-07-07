@@ -4,7 +4,7 @@ public class JSONResult {
 	private String result;	/* success or fail */
 	private Object data;	/* if success, set */
 	private String message;	/* if fail, set */
-
+	
 	public String getResult() {
 		return result;
 	}
@@ -30,9 +30,9 @@ public class JSONResult {
 	public static JSONResult success(Object data) {
 		return new JSONResult(data);
 	}
-
+	
 	public static JSONResult fail(String message) {
 		return new JSONResult(message);
 	}
-
+	
 }
